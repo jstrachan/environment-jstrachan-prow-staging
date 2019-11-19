@@ -1,0 +1,33 @@
+
+Showing logs for build [32mjstrachan-environment-jstrachan-2qss9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-9x57k[0m
+{"level":"warn","ts":1574193837.1868126,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1574193837.1880677,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-2qss9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-xh6z5[0m
+{"level":"warn","ts":1574193838.2207887,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1574193838.2303548,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-2qss9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-environment-jstrachan-2qss9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jstrachan-environment-jstrachan-t8pxz[0m
+{"level":"warn","ts":1574193843.3506594,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1574193843.7883923,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/environment-*********-prow-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-environment-jstrachan-2qss9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:8a5abb4005589cb75cbe3d82ed2164d1e6025d9d,5:1213e91e644c0599ce4ecc46bb72c6495d52dea0
+DEBUG: ran git fetch --unshallow origin 1213e91e644c0599ce4ecc46bb72c6495d52dea0: 8a5abb4005589cb75cbe3d82ed2164d1e6025d9d: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 8a5abb4005589cb75cbe3d82ed2164d1e6025d9d in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 1213e91e644c0599ce4ecc46bb72c6495d52dea0 in 
+Merged SHA 1213e91e644c0599ce4ecc46bb72c6495d52dea0 with commit message 'chore: Promote sandiegocool to version 0.0.1' into base branch master
+
+Showing logs for build [32mjstrachan-environment-jstrachan-2qss9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
